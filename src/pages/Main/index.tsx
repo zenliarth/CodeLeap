@@ -53,7 +53,6 @@ const Main = (): JSX.Element => {
   const handleModal = () => {
     setModalOpen(!modalOpen);
   };
-
   const canSavePost =
     [
       {
@@ -80,7 +79,7 @@ const Main = (): JSX.Element => {
         setContent('');
         dispatch(fetchPosts()).unwrap();
         setIsLoading(false);
-        toast.success('Post criado com sucesso!');
+        toast.success('Post created successfully');
       } catch (err) {
         toast.error('Failed to save the post');
         return false;
