@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 import { RootStateOrAny } from 'react-redux';
-import api from '../services/api';
 
 export const fetchPosts = createAsyncThunk('posts/fetchPosts', async () => {
-  const response = await api.get('/careers/');
+  const response = await axios.get('https://dev.codeleap.co.uk/careers/');
   const results = response.data.results;
   return results;
 });
@@ -11,7 +11,7 @@ export const fetchPosts = createAsyncThunk('posts/fetchPosts', async () => {
 export const addNewPost = createAsyncThunk(
   'posts/addNewPost',
   async (post: IPost) => {
-    const response = await api.post('/careers/', post);
+    const response = await axios.post('https://dev.codeleap.co.uk/careers/', post);
     return response.data;
   },
 );
@@ -19,7 +19,7 @@ export const addNewPost = createAsyncThunk(
 export const deletePost = createAsyncThunk(
   'posts/deletePost',
   async (id: number) => {
-    const response = await api.delete(`/careers/${id}/`);
+    const response = await axios.delete(`https://dev.codeleap.co.uk/careers/${id}/`);
     return response.data;
   },
 );
@@ -27,7 +27,7 @@ export const deletePost = createAsyncThunk(
 export const updatePost = createAsyncThunk(
   'posts/updatePost',
   async (post: IPost) => {
-    const response = await api.patch(`/careers/${post.id}/`, post);
+    const response = await axios.patch(`https://dev.codeleap.co.uk/careers/${post.id}/`, post);
     return response.data;
   },
 );
