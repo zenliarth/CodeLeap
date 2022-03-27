@@ -78,15 +78,4 @@ export const Text = styled.p`
   margin: 0px 30px 30px 30px;
 `;
 
-export const ErrorMessage = styled.p`
-  width: 100%;
-  max-width: 659px;
-  height: 33px;
-  background: #ffffff;
-  color: #ff0000;
-  right: 31px;
-  bottom: 30px;
-  border: none;
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
-`;
+
