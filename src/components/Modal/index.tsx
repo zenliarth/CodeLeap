@@ -14,7 +14,6 @@ import {
   ModalInput,
   ModalQuestion,
   ModalTitle,
-  ErrorMessage,
 } from './style';
 
 interface IModalProps {
@@ -30,7 +29,6 @@ const Modal = ({
 }: IModalProps): JSX.Element => {
   const [title, setTitle] = useState<string>(postSelected.title);
   const [content, setContent] = useState<string>(postSelected.content);
-  const [error, setError] = useState<string>('');
   const dispatch = useDispatch<AppDispatch>();
   const notify = (message: string) => toast.success(message);
 
@@ -61,7 +59,7 @@ const Modal = ({
           console.log('valid');
         })
         .catch((err) => {
-          setError(err.errors[0]);
+          console.log(err);
         });
       try {
         dispatch(
@@ -105,7 +103,6 @@ const Modal = ({
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <ErrorMessage>{error}</ErrorMessage>
         <ModalTitle>Content</ModalTitle>
         <ModalContent
           value={content}
