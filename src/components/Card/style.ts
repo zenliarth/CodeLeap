@@ -10,6 +10,10 @@ export const Container = styled.div`
   border: 1px solid #999999;
   box-sizing: border-box;
   margin: 34px 38px 0 38px;
+  @media screen and (max-width: 900px){
+    width: 80%;
+    margin: 34px auto 0 auto;
+  }
 `;
 
 export const Header = styled.div`

@@ -20,6 +20,13 @@ export const ModalBox = styled.div`
   background: #ffffff;
   border: 1px solid #cccccc;
   box-sizing: border-box;
+  @media screen and (max-width: 768px) {
+    max-width: 360px;
+  }
+  @media screen and (max-width: 375px) {
+    max-width: 300px;
+  }
+
 `;
 
 export const Title = styled.h1`
@@ -29,6 +36,13 @@ export const Title = styled.h1`
   font-weight: bold;
   line-height: 25.78px;
   margin: 28px 0 0 32px;
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+    line-height: 22.5px;
+  }
+  @media screen and (max-width: 375px) {
+    margin: 28px 0 0 20px;
+  }
 `;
 
 export const Text = styled.p`
@@ -37,6 +51,12 @@ export const Text = styled.p`
   line-height: 18.75px;
   font-weight: 400;
   margin: 30px 0 0 32px;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 375px) {
+    margin: 28px 0 0 20px;
+  }
 `;
 
 export const InputSignUp = styled.input`
@@ -52,6 +72,13 @@ export const InputSignUp = styled.input`
   padding: 6px 11px;
   ::placeholder {
     color: #bbb;
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 300px;
+  }
+  @media screen and (max-width: 375px) {
+    margin: 13px 25px 0 20px;
+    max-width: 255px;
   }
 `;
 
@@ -72,5 +99,8 @@ export const Button = styled.button`
     outline: 1px solid #ffffff;
     color: #FFFFFF;
     cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    right: 28px;
   }
 `;

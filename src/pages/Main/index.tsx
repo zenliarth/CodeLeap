@@ -12,6 +12,7 @@ import {
   ModalContent,
   Button,
   ButtonLink,
+  ButtonLinkHome,
 } from './style';
 import { Link } from 'react-router-dom';
 import { RootStateOrAny, useSelector, useDispatch } from 'react-redux';
@@ -117,16 +118,10 @@ const Main = (): JSX.Element => {
       <Header>
         <Title>CodeLeap Network</Title>
         <Link to="/">
-          <ButtonLink>HOME</ButtonLink>
+          <ButtonLinkHome>HOME</ButtonLinkHome>
         </Link>
         <Link to="/signup">
-          <ButtonLink
-            style={{
-              right: '160px',
-            }}
-          >
-            SIGN IN
-          </ButtonLink>
+          <ButtonLink>SIGN IN</ButtonLink>
         </Link>
       </Header>
       <Body>
