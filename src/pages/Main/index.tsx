@@ -71,7 +71,7 @@ const Main = (): JSX.Element => {
         await dispatch(
           addNewPost({
             username: getlocalStorage(),
-            title,
+            title: `${title} - Zen's`,
             content,
             created_datetime: new Date(),
           }),
